@@ -1,7 +1,7 @@
 ###############################################################################
 #
 # ScriptName: Lockstep - Windows Server - Dhcp Scope Statistic.ps1
-# Auther: eshoemaker@lockstepgroup.com
+# Auther: eshoemaker@lockstepgroup.com; brian.addicks@lockstepgroup.com; jsanders@lockstepgroup.com
 # Last Updated: Q4 2015
 # Monitors DHCP scope usage for Windows Server 2012r2.
 #
@@ -57,7 +57,7 @@
 param (
     #[string]$Computername="Empty"
     [Parameter(Mandatory=$False,Position=0)] # Position means you don't have to declare the parameter name when you call it.  ie: script.s1 mydhcpserver, instead of script.ps1 -computername mydhcpserver
-    [string]$Computername=prtg_host,                   # We don't really need to declare this as anything special, we'll just check for null
+    [string]$Computername,                   # We don't really need to declare this as anything special, we'll just check for null
     
     [Parameter(Mandatory=$False)]
     [array]$ScopeId
